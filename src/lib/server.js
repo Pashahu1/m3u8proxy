@@ -6,7 +6,8 @@ dotenv.config();
 
 const host = process.env.HOST || "127.0.0.1";
 const port = process.env.PORT || 8080;
-const web_server_url = process.env.PUBLIC_URL || `http://${host}:${port}`;
+const web_server_url =
+  "https://m3u8proxy-rose.vercel.app" || `http://${host}:${port}`;
 
 export default function server() {
   createServer({
