@@ -10,7 +10,10 @@ const web_server_url = process.env.PUBLIC_URL || `http://${host}:${port}`;
 
 export default function server() {
   createServer({
-    originBlacklist: ["*"],
+    originBlacklist: [
+      "http://localhost:3000",
+      "https://otaku-fusion.vercel.app",
+    ],
     originWhitelist: process.env.ALLOWED_ORIGINS
       ? process.env.ALLOWED_ORIGINS.split(",")
       : [],
