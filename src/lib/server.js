@@ -5,8 +5,8 @@ import colors from "colors";
 dotenv.config();
 
 export default function server() {
-  const host = process.env.HOST;
-  const port = process.env.PORT;
+  const host = process.env.HOST || "0.0.0.0";
+  const port = process.env.PORT || 8080;
   createServer({
     originBlacklist: [],
     originWhitelist: process.env.ALLOWED_ORIGINS
