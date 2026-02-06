@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.js",
+      "src": "/src/index.js",
       "use": "@vercel/node"
     }
   ],
@@ -11,9 +11,7 @@
       "src": "/(.*)",
       "dest": "/src/index.js",
       "headers": {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
+        "Access-Control-Allow-Origin": "*"
       }
     }
   ]
